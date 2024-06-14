@@ -21,7 +21,7 @@ Works on localhost:8080 when run locally.
      - `sortBy`: Field(s) to sort by (optional)
    - **Example Request:**
      ```
-     GET https://localhost:8080/compensation_data?min_salary=50000&max_salary=100000&sortBy=salary
+     GET http://localhost:8080/compensation_data?min_salary=50000&max_salary=100000&sortBy=salary
      ```
    - **Example Response:**
      ```json
@@ -52,7 +52,7 @@ Works on localhost:8080 when run locally.
      - `fields`: Fields to include in the response (optional)
    - **Example Request:**
      ```
-     GET https://localhost:8080/compensation_data/0?fields=jobTitle,salary
+     GET http://localhost:8080/compensation_data/0?fields=jobTitle,salary
      ```
    - **Example Response:**
      ```json
