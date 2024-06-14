@@ -122,7 +122,12 @@ public class CompensationDataService {
     String[] requestedFields = fields.split(",");
     for (String field : requestedFields) {
       if (field.equalsIgnoreCase("salary")) {
-        newJson.put("salary", filteredJson.get("What is your annual salary?"));
+        String salaryStr = jsonObject.optString("What is your annual salary?", "").replaceAll("[^\\d]", "");
+        Long annualSalary = null;
+        if (!salaryStr.isEmpty()) {
+           annualSalary= Long.parseLong(salaryStr);
+        }
+        newJson.put("salary", annualSalary);
       }
       else if (field.equalsIgnoreCase("jobtitle")) {
         newJson.put("jobtitle", filteredJson.get("Job title"));
