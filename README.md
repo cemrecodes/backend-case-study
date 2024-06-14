@@ -1,5 +1,5 @@
 # backend-case-study
-Backend Case Study for Carla
+Backend Case Study Exercise A: Expose an API for querying compensation data for Carla. 
 
 ### Compensation Data API
 
